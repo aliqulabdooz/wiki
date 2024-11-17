@@ -1,0 +1,17 @@
+{% extends 'encyclopedia/layout.html' %}
+{% block title %}
+    Add encyclopedia
+{% endblock %}
+{% block body %}
+    <form class="container mt-4 w-100" action="" method="post">
+        {% csrf_token %}
+        <h1 class="pt-2">Add Encyclopedia</h1>
+        <label class="mt-2" for="title">Title:</label>
+        <input id="title" class="form-control m-2 w-75" type="text" name="title" placeholder="..." required>
+
+        <label class="mt-2" for="md_text">Enter your wiki of encyclopedia</label>
+        <textarea class="form-control m-2 w-75" name="md_text" id="md_text" cols="30" rows="10" placeholder="..."
+                  required></textarea>
+        <input class="m-2 btn btn-outline-primary" type="submit" value="Submit">
+    </form>
+{% endblock %}
